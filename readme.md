@@ -1,4 +1,5 @@
-### npm install to install node_modules
+## install node_modules
+### npm install
 
 ## Run Server cmd:
 ### npm run server
