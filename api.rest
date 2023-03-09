@@ -1,0 +1,54 @@
+# register user
+
+POST http://localhost:4000/api/v1/auth/register 
+content-type: application/json
+
+{
+    "emailId": "dharan@gmail.com",
+    "password": "123456",
+    "name" : "dharan",
+    "phoneNumber": 9988776655,
+    "type": "Google",
+    "role": "Joint",
+    "userId": "456456"
+}
+
+
+### login user
+
+POST http://localhost:4000/api/v1/auth/login
+content-type: application/json
+
+{
+    "emailId": "dharan@gmail.com",
+    "password": "123456"
+}
+
+
+### create PersonalDetails 
+POST http://localhost:4000/api/v1/auth/personaldetails
+Content-Type: application/json
+
+{
+    "userId" : "456456",
+    "fatherName": "hardin",
+    "motherName": "tessa",
+    "street":  "34,northan-highway",
+    "area": "somewhere",
+    "city": "NY",
+    "state": "DB",
+    "country": "USA",
+    "pincode": "670002",
+    "educationDetails": [{
+        "qualification" : "MBA",
+        "since" : "2020-05-05T00:00:00.000Z",
+        "to": "2022-07-05T00:00:00.000Z",
+        "percentage": "75",
+        "completed": "true"
+    }]
+
+}
+
+### get users details with personal details
+
+GET http://localhost:4000/api/v1/auth/personaldetails
